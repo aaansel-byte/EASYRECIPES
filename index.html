@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Easy Recipe</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="landing-page">
+
+    <h1>🍳 Easy Recipe</h1>
+
+    <p class="welcome">
+        Welcome to Easy Recipe!
+    </p>
+
+    <p class="desc">
+        Discover delicious recipes
+        from around the world.
+    </p>
+
+    <div class="emoji">
+        🍕 🍝 🍔 🥗 🍰
+    </div>
+
+    <button onclick="enterWebsite()">
+        Explore Recipes →
+    </button>
+
+</div>
+
+<div id="main-page" style="display:none;">
+
+<header>
+
+<h1>🍳 Easy Recipe</h1>
+<button id="darkBtn">🌙 Dark Mode</button>
+<input
+type="text"
+id="search"
+placeholder="Search recipe..."
+onkeyup="searchRecipe()">
+
+<div id="categories">
+
+<button onclick="filterCategory('All')">All</button>
+
+<button onclick="filterCategory('Pizza')">Pizza</button>
+
+<button onclick="filterCategory('Pasta')">Pasta</button>
+
+<button onclick="filterCategory('Rice')">Rice</button>
+
+<button onclick="filterCategory('Salad')">Salad</button>
+
+<button onclick="filterCategory('Burger')">Burger</button>
+
+<button onclick="filterCategory('Dessert')">Dessert</button>
+
+</div>
+
+</header>
+
+
+<main>
+
+<div class="top-buttons">
+    <button onclick="showFavorites()">❤️ Favorites</button>
+    <button onclick="showAllRecipes()">🏠 Home</button>
+</div>
+
+<div id="recipe-list"></div>
+
+<div id="recipe-detail" class="hidden">
+
+<button id="backBtn">⬅ Back</button>
+
+<img id="detail-image">
+
+<h2 id="detail-name"></h2>
+
+<h3>Ingredients</h3>
+
+<ul id="detail-ingredients"></ul>
+
+<h3>Steps</h3>
+
+<ol id="detail-steps"></ol>
+
+</div>
+
+</main>
+
+<script src="recipes.js"></script>
+<script src="script.js"></script>
+
+</div>
+
+</body>
+
+</html>
